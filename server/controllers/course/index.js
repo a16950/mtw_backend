@@ -1,6 +1,7 @@
 var express = require('express');
 var ctrl = require('./controller');
 var EvaluationComponentRouter = require('./evaluation-component');
+var ClassRouter = require('./class');
 
 function CourseRouter() {
   var router = express.Router();
@@ -16,6 +17,8 @@ function CourseRouter() {
   .put(ctrl.updateById);
 
   router.use('/:courseId/evaluation-components', EvaluationComponentRouter)
+
+  router.use('/:courseId/classes', ClassRouter)
 
   return router;
 }
