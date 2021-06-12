@@ -19,7 +19,7 @@ class CourseService {
   }
 
   updateById(id, values) {
-    return Course.findOneAndUpdate({_id: id}, values, {new: true, runValidators: true}).exec();
+    return Course.findOneAndUpdate({ _id: id }, values, { new: true, runValidators: true }).exec();
   }
 }
 

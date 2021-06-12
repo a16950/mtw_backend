@@ -20,6 +20,8 @@ function CourseRouter() {
 
   router.use('/:courseId/classes', ClassRouter)
 
+  router.use('/:componentId/criteria', CriteriaRouter)
+
   return router;
 }
 

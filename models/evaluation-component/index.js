@@ -18,7 +18,7 @@ class EvaluationComponentService {
   }
 
   updateById(id, values) {
-    return EvaluationComponent.findOneAndUpdate({_id: id}, values, {new: true, runValidators: true}).exec();
+    return EvaluationComponent.findOneAndUpdate({ _id: id }, values, { new: true, runValidators: true }).exec();
   }
 }
 
