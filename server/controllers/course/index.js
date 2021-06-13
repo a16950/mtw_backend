@@ -1,7 +1,8 @@
 var express = require('express');
 var ctrl = require('./controller');
 var EvaluationComponentRouter = require('./evaluation-component');
-var ClassRouter = require('./class');
+var CriteriaRouter = require('./criteria');
+var StudentRouter = require('./student');
 
 function CourseRouter() {
   var router = express.Router();
@@ -18,9 +19,9 @@ function CourseRouter() {
 
   router.use('/:courseId/evaluation-components', EvaluationComponentRouter)
 
-  router.use('/:courseId/classes', ClassRouter)
+  router.use('/:componentId/criterias', CriteriaRouter)
 
-  router.use('/:componentId/criteria', CriteriaRouter)
+  router.use('/:componentId/students', StudentRouter)
 
   return router;
 }

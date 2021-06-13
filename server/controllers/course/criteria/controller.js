@@ -1,5 +1,5 @@
-var Criteria = require('../../../models/Criteria');
-var helpers = require('../../helpers');
+var Criteria = require('../../../../models/criteria');
+var helpers = require('../../../helpers');
 
 class CriteriaController {
   create(req, res, next) {
