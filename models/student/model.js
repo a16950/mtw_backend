@@ -5,7 +5,7 @@ var StudentSchema = new mongoose.Schema(
   {
     name: {type: String, required: true},
     course: { type: ObjectId, ref: 'Course', required: true},
-    evaluationcomponent: { type: ObjectId, ref: 'EvaluationComponent', required: true}
+    evaluationComponent: { type: ObjectId, ref: 'EvaluationComponent', required: true}
   },
   { timestamps: true }
 );

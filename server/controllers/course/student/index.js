@@ -9,7 +9,7 @@ function StudentRouter() {
   .post(ctrl.create);
 
 
-  router.route('/:StudentId')
+  router.route('/:studentId')
   .delete(ctrl.removeById)
   .get(ctrl.findById)
   .put(ctrl.updateById);
