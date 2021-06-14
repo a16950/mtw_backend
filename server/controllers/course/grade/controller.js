@@ -1,4 +1,4 @@
-var Grade = require('../../../../models/grade');
+var Grade = require('../../../../models/grades');
 var helpers = require('../../../helpers');
 
 class GradeController {

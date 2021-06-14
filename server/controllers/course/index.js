@@ -3,6 +3,7 @@ var ctrl = require('./controller');
 var EvaluationComponentRouter = require('./evaluation-component');
 var CriteriaRouter = require('./criteria');
 var StudentRouter = require('./student');
+var GradeRouter = require('./grade');
 
 function CourseRouter() {
   var router = express.Router();
