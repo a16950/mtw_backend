@@ -19,8 +19,6 @@ function CourseRouter() {
 
   router.use('/:courseId/evaluation-components', EvaluationComponentRouter)
 
-  router.use('/:componentId/criterias', CriteriaRouter)
-
   router.use('/:courseId/evaluation-components/:componentId/students', StudentRouter)
 
   router.use('/:courseId/evaluation-components/:componentId/criterias', CriteriaRouter)
