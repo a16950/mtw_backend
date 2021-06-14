@@ -3,7 +3,7 @@ var helpers = require('../../../helpers');
 
 class StudentController {
   create(req, res, next) {
-    var evaluationComponent = { evaluationComponent: req.params.evaluationComponentId };
+    var evaluationComponent = { evaluationComponent: req.params.componentId };
     var data = Object.assign(req.body, evaluationComponent);
 
     Student.create(data)
@@ -12,28 +12,28 @@ class StudentController {
   }
 
   findAll(req, res, next) {
-    Student.findAll({ evaluationComponent: req.params.evaluationComponentId })
+    Student.findAll({evaluationComponent: req.params.componentId })
       .then(helpers.successResponse(res))
       .catch(helpers.nextError(next));
   }
 
   findById(req, res, next) {
-    Student.findById(req.params.evaluationComponentId)
+    Student.findById(req.params.studentId)
       .then(helpers.successResponse(res))
       .catch(helpers.nextError(next));
   }
 
   removeById(req, res, next) {
-    Student.remove({ _id: req.params.evaluationComponentId })
+    Student.remove({ _id: req.params.studentId })
       .then(helpers.successEmptyResponse(res))
       .catch(helpers.nextError(next));
   }
 
   updateById(req, res, next) {
-    var evaluationComponent = { evaluationComponent: req.params.evaluationComponentId };
-    var data = Object.assign(req.body, evaluationComponent);
+    var student = { student: req.params.studentId };
+    var data = Object.assign(req.body, student);
 
-    Student.updateById(req.params.evaluationComponentId, data)
+    Student.updateById(req.params.studentId, data)
       .then(helpers.successResponse(res))
       .catch(helpers.nextError(next));
   }
