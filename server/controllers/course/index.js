@@ -23,6 +23,8 @@ function CourseRouter() {
 
   router.use('/:courseId/evaluation-components/:componentId/criterias', CriteriaRouter)
 
+  router.use('/:courseId/evaluation-components/:componentId/students/:studentId/grades', GradeRouter)
+
 
   return router;
 }
