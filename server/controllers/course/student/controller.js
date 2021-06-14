@@ -30,8 +30,8 @@ class StudentController {
   }
 
   updateById(req, res, next) {
-    var student = { student: req.params.studentId };
-    var data = Object.assign(req.body, student);
+    var evaluationComponent = { evaluationComponent: req.params.componentId };
+    var data = Object.assign(req.body, evaluationComponent);
 
     Student.updateById(req.params.studentId, data)
       .then(helpers.successResponse(res))
